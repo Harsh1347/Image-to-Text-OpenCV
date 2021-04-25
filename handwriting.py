@@ -6,7 +6,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
-IMG_PATH = "./test-images/File_003.jpeg"
+IMG_PATH = "./test-images/File_008.jpeg"
 
 
 def predict_letter(img):
@@ -34,6 +34,11 @@ ret, thresh = cv2.threshold(grey_img, 60, 255, cv2.THRESH_BINARY_INV)
 
 contours, hierarchy = cv2.findContours(thresh,
                                        cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+cv2.namedWindow('Contours', cv2.WINDOW_NORMAL)
+cv2.imshow('Contours', thresh)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 words = []
 pos = []
