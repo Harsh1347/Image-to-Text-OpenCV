@@ -77,7 +77,7 @@ print(" ".join(correct_order_words))
 img = cv2.putText(img, f"Predicted Text : {''.join(correct_order_words)}", (100, 150), cv2.FONT_HERSHEY_SIMPLEX,
                   5, (255, 0, 0), 4, cv2.LINE_AA)
 
-# cv2.imwrite(f"./results/{IMG_PATH.split('/')[-1]}", img)
+cv2.imwrite(f"./results/{IMG_PATH.split('/')[-1]}", img)
 
 cv2.namedWindow('Contours', cv2.WINDOW_NORMAL)
 cv2.imshow('Contours', img)

@@ -4,6 +4,7 @@ The program uses OpenCV to identify the position of letters in the image and usi
 ## Methodology
 The flow is as follow:
 - The image is eroded to join the possible discontinuity while writing the letters. This makes sure that the letters are identified as a whole. The image below shows an example for the same.
+
 ![discontinuity](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/split.png)
 
 - Corresponding bounding box for each contour is found. Based on this, image is cropped for each contour, resized to 28x28 and fed to the ML model. We need to ignore smaller contour which might be due to noise therefore a simple filter is added. This filter checks for the area of contour and if it is less than threshold area, it is ignored.
@@ -15,12 +16,19 @@ The flow is as follow:
 - Finally all the arranged words along with spaces are joined together to return the final input.
 
 ## Model
+CNN model was trained on A-Z Dataset. The model takes an image of size 28x28 and predicts the output as 0 - 25, each corresponding to one of the 26 alphabets.
+The model specifications are mentioned below 
+
+![Model](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/model.png)
+
+The Models folder  contains 5 different models. Each saved model has been trained on different number of training images and therefore performance varies from model to model. *Model_3* performs the best on the given test data.
 
 ## Results
 Here are some of the results on:
 
 - **Single Letter**
 ![B](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_005.jpeg)
+
 ![G](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_006.jpeg)
 
 - **Single Word**
@@ -28,11 +36,14 @@ Here are some of the results on:
 
 - **Multiple Words**
 ![BLUE PEN](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_007.jpeg)
+
 ![BLUE BRICKS](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_000.jpeg)
+
 ![PRAVIN KUMAR](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_001.jpeg)
 
 - **Sentence**
 ![I AM WORKING TODAY](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_003.jpeg)
+
 ![THIS IS TESTING IMAGE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_004.jpeg)
 
 ## Limitations
