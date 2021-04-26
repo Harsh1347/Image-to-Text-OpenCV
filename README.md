@@ -65,4 +65,5 @@ The image below shows some of the limitations.
 
 ![THIS IS TESTING IMAGE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_008.jpg)
 
-
+- Spacing between the words is not enough.
+- Because of discontinuity while writing the letter, one character is being treated as two.
