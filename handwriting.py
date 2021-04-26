@@ -6,7 +6,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
-IMG_PATH = "./test-images/File_008.jpeg"
+IMG_PATH = "./test-images/File_009.jpeg"
 
 
 def predict_letter(img):
