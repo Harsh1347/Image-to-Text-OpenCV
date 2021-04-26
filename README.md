@@ -36,9 +36,13 @@ Here are some of the results on:
 
 ![MOUSE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_002.jpeg)
 
+![PORTABLE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_010.jpg)
+
 - **Multiple Words**
 
 ![BLUE PEN](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_007.jpeg)
+
+![ASUS LAPTOP](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_009.jpeg)
 
 ![BLUE BRICKS](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_000.jpeg)
 
@@ -56,4 +60,9 @@ Here are some of the results on:
 - Only single line text can be detected.
 - Letters should not be connected and must be properly spaced.
 - ML model doesn't recognize any numbers or any special characters.
+
+The image below shows some of the limitations.
+
+![THIS IS TESTING IMAGE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_008.jpg)
+
 
