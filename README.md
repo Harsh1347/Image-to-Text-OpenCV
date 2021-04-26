@@ -42,15 +42,23 @@ Here are some of the results on:
 
 ![BLUE BRICKS](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_000.jpeg)
 
+*'C' in BRICKS is incorrextly identified as 'G'*
+
 ![PRAVIN KUMAR](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_001.jpeg)
+
+*'A' in Kumar does look like R*
 
 - **Sentence**
 
 ![I AM WORKING TODAY](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_003.jpeg)
+
+*'KI' is being treated as single character as there isn't enough space*
 
 ![THIS IS TESTING IMAGE](https://github.com/Harsh1347/Image-to-Text-OpenCV/blob/main/results/File_004.jpeg)
 
 ## Limitations
 
 - Only single line text can be detected.
-- Letters should not be connected.
+- Letters should not be connected and must be properly spaced.
+- ML model doesn't recognize any numbers or any special characters.
+
