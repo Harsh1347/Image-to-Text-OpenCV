@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import cv2
+import os
 from helper import img2txt
 
 st.set_page_config(layout='wide')
@@ -43,7 +44,7 @@ if page == 'Methodology':
     The flow is as follow:
     - The image is eroded to join the possible discontinuity while writing the letters. This makes sure that the letters are identified as a whole. The image below shows an example for the same.
     """)
-    st.image("./results/split.png")
+    st.image(os.path.join("./results/", "split.png"))
     st.markdown("""
     - Corresponding bounding box for each contour is found. Based on this, image is cropped for each contour, resized to 28x28 and fed to the ML model. We need to ignore smaller contour which might be due to noise therefore a simple filter is added. This filter checks for the area of contour and if it is less than threshold area, it is ignored.
 
@@ -62,29 +63,29 @@ if page == 'Model':
 The model specifications are mentioned below
     """)
     st.image(
-        "./results/model.png")
+        os.path.join("./results/", "model.png"))
 if page == 'Results':
     res = st.sidebar.radio("Select", ["Single Letter",
                                       "Single Word", "Multiple Words", "Sentence"])
     st.header(f"{page} for {res}")
 
     if res == "Single Letter":
-        st.image("./results/File_005.jpeg")
-        st.image("./results/File_006.jpeg")
+        st.image(os.path.join("./results/", "File_005.jpeg"))
+        st.image(os.path.join("./results/", "File_006.jpeg"))
 
     if res == "Single Word":
-        st.image("./results/File_002.jpeg")
-        st.image("./results/File_010.jpg")
+        st.image(os.path.join("./results/", "File_002.jpeg"))
+        st.image(os.path.join("./results/", "File_010.jpg"))
 
     if res == "Multiple Words":
-        st.image("./results/File_007.jpeg")
-        st.image("./results/File_009.jpeg")
-        st.image("./results/File_000.jpeg")
-        st.image("./results/File_001.jpeg")
+        st.image(os.path.join("./results/", "File_007.jpeg"))
+        st.image(os.path.join("./results/", "File_009.jpeg"))
+        st.image(os.path.join("./results/", "File_000.jpeg"))
+        st.image(os.path.join("./results/", "File_001.jpeg"))
 
     if res == "Sentence":
-        st.image("./results/File_003.jpeg")
-        st.image("./results/File_004.jpeg")
+        st.image(os.path.join("./results/", "File_003.jpeg"))
+        st.image(os.path.join("./results/", "File_004.jpeg"))
 
 
 if page == 'Limitations':
@@ -97,7 +98,7 @@ if page == 'Limitations':
 
     The image below shows some of the limitations.    
         """)
-    st.image("./results/File_008.jpg")
+    st.image(os.path.join("./results/", "File_008.jpg"))
 
     st.markdown("""
     - Spacing between the words is not enough.
