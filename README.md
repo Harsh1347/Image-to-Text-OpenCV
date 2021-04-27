@@ -1,4 +1,5 @@
-# Image to Text Using OpenCV and Alphabet Recognition [![Python](https://github.com/jalbertsr/logo-badge-images/blob/master/img/rsz_python.png?raw=true)](https://www.python.org/) ![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)
+# Image to Text Using OpenCV and Alphabet Recognition 
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/harsh1347/image-to-text-opencv/main/app.py)
 The program uses OpenCV to identify the position of letters in the image and using a CNN Model predicts the letter. These predicted letters are combined to form words and sentences.
 
 #### Link to web-app https://share.streamlit.io/harsh1347/image-to-text-opencv/main/app.py
