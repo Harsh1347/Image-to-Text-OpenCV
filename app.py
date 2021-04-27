@@ -21,7 +21,8 @@ if page == 'Home':
 
     st.info("""
     The model currently only supports single line texts. \n\n
-    Letters and words should be properly spaced. For reference check the results section.
+    Letters and words should be properly spaced. For reference check the results section.\n\n
+    If the letters or possible region which can be identified as letter is too close to the edges, the model might give an error.
     """)
 
     img_file_buffer = st.file_uploader("Upload the image here.")
@@ -59,8 +60,8 @@ if page == 'Model':
     st.header(page)
     st.markdown("""
     CNN model was trained on A-Z Dataset. The model takes an image of size 28x28 and predicts the output as 0 - 25, each corresponding to one of the 26 alphabets.
-    The Models folder  contains 5 different models. Each saved model has been trained on different number of training images and therefore performance varies from model to model.
-The model specifications are mentioned below
+    The [Models folder](https://github.com/Harsh1347/Image-to-Text-OpenCV/tree/main/models) contains 5 different models. Each saved model has been trained on different number of training images and therefore performance varies from model to model.
+    The model specifications are mentioned below
     """)
     st.image(
         os.path.join("./results/", "model.png"))
