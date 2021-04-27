@@ -22,9 +22,12 @@ if page == 'Home':
     st.info("""
     The model currently only supports single line texts. \n\n
     Letters and words should be properly spaced. For reference check the results section.\n\n
-    If the letters or possible region which can be identified as letter is too close to the edges, the model might give an error.
+    If the letters or possible region which can be identified as letter is too close to the edges, the model might give an error.\n\n
+    Preferred Image size greater than 2500x1000
     """)
-
+    
+    st.markdown("Sample images can be found [here](https://github.com/Harsh1347/Image-to-Text-OpenCV/tree/main/test-images)")
+    
     img_file_buffer = st.file_uploader("Upload the image here.")
 
     if img_file_buffer is not None:
